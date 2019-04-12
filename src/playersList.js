@@ -10,7 +10,7 @@ myuProps = {
 }
 
 mufnc () {
-    
+
 }
 
     render() {
@@ -18,7 +18,7 @@ mufnc () {
         const cards = this.props.playList.map( (player, index) => {
             let thisClass = this.props.currentPlayer === index ? 'card-sel'  : 'card';
             return <div key={index} className={thisClass}>
-                <Player player={player} index={index} callOnClick={this.props.callOnClick} />
+                <Player player={player} currentPlayer ={this.props.currentPlayer} index={index} callOnClick={this.props.callOnClick} />
             </div>;
         });
         return (
